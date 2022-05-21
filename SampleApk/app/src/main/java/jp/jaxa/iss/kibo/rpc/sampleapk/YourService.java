@@ -31,12 +31,12 @@ public class YourService extends KiboRpcService {
         timer.start();
         while(timer.timeElapsed()< 90)
         {
-            t_now=timer.timeElapsed();
+            double t_now=timer.timeElapsed();
             if(t_now>=0.1*count_time)
             {
                 count_time=count_time+1;
                 Kinematics k=api.getRobotKinematics();
-                Log.d("Velocity","Time:"+t_now+":"+k.getLinearVelocity.toString());
+                Log.i("Velocity","Time:"+t_now+":"+k.getLinearVelocity.toString());
             }
         }
         Point point = new Point(10.71f, -7.5f, 4.48f);
